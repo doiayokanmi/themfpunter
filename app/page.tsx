@@ -61,7 +61,7 @@ export default function Home() {
                 alt="logo"
               />
 
-              <div className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[90px] w-screen lg:w-auto lg:space-y-0 space-y-8 ${openMenu ? "h-[400px]" : 'h-0'} lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}>
+              <div className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[90px] left-0 w-screen lg:w-auto lg:space-y-0 space-y-8 ${openMenu ? "h-[400px]" : 'h-0'} lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}>
                 <Link href="">About Us</Link>
                 <Link href="">About Us</Link>
                 <Link href="">About Us</Link>
