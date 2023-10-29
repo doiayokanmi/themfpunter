@@ -16,3 +16,5 @@ export const links = [
         linkto: '/vip'
     },
 ]
+
+export const tabs = ['Yesterday', 'Today', 'Tomorrow']
