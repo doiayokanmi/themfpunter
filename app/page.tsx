@@ -12,8 +12,8 @@ export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
-    setOpenMenu(!openMenu)
-  }
+    setOpenMenu(!openMenu);
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -61,7 +61,11 @@ export default function Home() {
                 alt="logo"
               />
 
-              <div className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[90px] left-0 w-screen lg:w-auto lg:space-y-0 space-y-8 ${openMenu ? "h-[400px]" : 'h-0'} lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}>
+              <div
+                className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[90px] left-0 w-screen lg:w-auto lg:space-y-0 px-4 space-y-8 ${
+                  openMenu ? "h-[400px]" : "h-0"
+                } lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}
+              >
                 <Link href="">About Us</Link>
                 <Link href="">About Us</Link>
                 <Link href="">About Us</Link>
@@ -69,11 +73,11 @@ export default function Home() {
               </div>
 
               <div className="flex items-center space-x-2" onClick={toggleMenu}>
-                <Link href={'/'} className="bg-primary p-2 rounded">Subscribe</Link>
+                <Link href={"/"} className="bg-primary p-2 rounded">
+                  Subscribe
+                </Link>
                 <div className="cursor-pointer lg:hidden p-2 rounded-full bg-white text-primary">
-                  {
-                    openMenu ? <X size={16} /> : <AlignJustify size={16}/>
-                  }
+                  {openMenu ? <X size={16} /> : <AlignJustify size={16} />}
                 </div>
               </div>
             </nav>
@@ -83,7 +87,12 @@ export default function Home() {
                 WELCOME TO THE MF PUNTER PREDICTION WEB APP
               </h1>
 
-              <Image src={"/image/banner-img-2.png"} width={500} height={500} alt="logo" />
+              <Image
+                src={"/image/banner-img-2.png"}
+                width={500}
+                height={500}
+                alt="logo"
+              />
             </div>
           </div>
         </section>
