@@ -11,7 +11,7 @@
 
 :root {
   --primaryColor: #1B8DA0;
-  --overlay: rgba(0, 0, 0, 0.9);
+  --overlay: rgba(0, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar-thumb {

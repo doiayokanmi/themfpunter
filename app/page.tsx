@@ -3,6 +3,8 @@
 import AnimatedWrapper from "./wrapper/AnimatedWrapper";
 import Hero from "./components/Hero";
 import Time from "./components/Time";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 export default function Home() {
   
@@ -11,6 +13,8 @@ export default function Home() {
       <main className="overflow-x-hidden">
         <Time />
         <Hero />
+        <Main />
+        <Footer />
       </main>
     </AnimatedWrapper>
   );
