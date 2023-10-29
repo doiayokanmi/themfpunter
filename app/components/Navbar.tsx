@@ -1,10 +1,16 @@
 import { AlignJustify, X } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { links } from "@/util";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -19,10 +25,12 @@ const Navbar = () => {
             openMenu ? "h-[400px]" : "h-0"
           } lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}
         >
-          <Link href="">About Us</Link>
-          <Link href="">About Us</Link>
-          <Link href="">About Us</Link>
-          <Link href="">About Us</Link>
+            {
+                links.map((link, index) => (
+                    <Link href={link.linkto} className={`uppercase hover:text-primary ${currentPath === link.linkto && 'text-primary'}`} key={index}>{link.title}</Link>
+                ))
+            }
+          
         </div>
 
         <div className="flex items-center space-x-2" onClick={toggleMenu}>

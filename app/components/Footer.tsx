@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-    <footer className="flex justify-between bg-primary p-2 text-white">
+    <footer className="flex justify-between bg-primary p-4 lg:px-24 text-white">
         <div>
             <p>The MF Punter official Website</p>
         </div>
