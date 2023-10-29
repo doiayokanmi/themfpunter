@@ -78,7 +78,7 @@ export default function Home() {
               </div>
             </nav>
 
-            <div className="lg:h-[430px] h-[330px] lg:flex overflow-hidden items-center justify-between text-white lg:px-24 p-4">
+            <div className="lg:h-[430px] h-[320px] lg:flex overflow-hidden items-center justify-between text-white lg:px-24 p-4">
               <h1 className="font-bold lg:text-6xl text-2xl flex-1 text-center lg:text-start basis-1/2 lg:leading-[70px]">
                 WELCOME TO THE MF PUNTER PREDICTION WEB APP
               </h1>
