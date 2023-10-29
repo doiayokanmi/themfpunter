@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <section className="lg:h-[530px] overflow-hidden h-[400px] bg-heroBg bg-cover bg-center">
-          <div className="h-full bg-overlay relative">
+          <div className="h-full bg-overlay overflow-hidden relative">
             <nav className="sticky top-0 flex items-center text-white justify-between bg-black lg:px-24 p-4">
               <Image
                 src={"/image/logo.PNG"}
