@@ -51,7 +51,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <section className="lg:h-[530px] h-[400px] bg-heroBg bg-cover bg-center">
+        <section className="lg:h-[530px] overflow-hidden h-[400px] bg-heroBg bg-cover bg-center">
           <div className="h-full bg-overlay relative">
             <nav className="sticky top-0 flex items-center text-white justify-between bg-black lg:px-24 p-4">
               <Image
@@ -72,7 +72,7 @@ export default function Home() {
                 <Link href={'/'} className="bg-primary p-2 rounded">Subscribe</Link>
                 <div className="cursor-pointer lg:hidden p-2 rounded-full bg-white text-primary">
                   {
-                    openMenu ? <X size={32} /> : <AlignJustify size={32}/>
+                    openMenu ? <X size={16} /> : <AlignJustify size={16}/>
                   }
                 </div>
               </div>
