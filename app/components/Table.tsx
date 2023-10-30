@@ -2,7 +2,7 @@ import React from "react";
 
 const Table = () => {
   return (
-    <table className="w-full">
+    <table className="w-full text-xs lg:text-base">
       <thead>
         <tr>
           <th className="p-2 py-4 text-left">S/N</th>
