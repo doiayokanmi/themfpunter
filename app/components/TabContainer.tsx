@@ -1,6 +1,7 @@
 import React from "react";
 import { tabs } from "@/util";
 import { Tab } from "@headlessui/react";
+import Table from "./Table";
 
 const TabContainer = () => {
   const [tabIndex, setTabIndex] = React.useState(1);
@@ -28,9 +29,11 @@ const TabContainer = () => {
           ))}
         </Tab.List>
         <Tab.Panels>
-          <Tab.Panel className={`py-4`}>Content 1</Tab.Panel>
-          <Tab.Panel className={`py-4`}>Content 2</Tab.Panel>
-          <Tab.Panel className={`py-4`}>Content 3</Tab.Panel>
+          {tabs.map((tab, index) => (
+            <Tab.Panel key={index} className={`py-4`}>
+              <Table />
+            </Tab.Panel>
+          ))}
         </Tab.Panels>
       </Tab.Group>
     </>
