@@ -22,7 +22,7 @@ const Navbar = () => {
         <Image src={"/image/logo.PNG"} width={40} height={10} alt="logo" />
 
         <div
-          className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[80px] left-0 w-screen lg:w-auto lg:space-y-0 px-4 space-y-8 ${
+          className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-black absolute top-[70px] left-0 w-screen lg:w-auto lg:space-y-0 px-4 space-y-8 ${
             openMenu ? "h-[400px]" : "h-0"
           } lg:h-auto lg:space-x-16 transition-all ease-in-out duration-200`}
         >
