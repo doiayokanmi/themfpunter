@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <AnimatedWrapper>
       <main className="overflow-x-hidden h-screen">
-        <Time />
         <Hero />
         <Main />
         <Footer />

@@ -17,7 +17,8 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="sticky top-0 flex items-center text-white justify-between bg-black lg:px-24 p-4">
+      <div className="sticky top-0">
+      <nav className="flex items-center text-white justify-between bg-black lg:px-24 p-4">
         <Image src={"/image/logo.PNG"} width={40} height={10} alt="logo" />
 
         <div
@@ -42,6 +43,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      </div>
     </>
   );
 };

@@ -1,50 +1,24 @@
-import { tabs } from "@/util";
-import { Tab } from "@headlessui/react";
+
 import React from "react";
+import TabContainer from "./TabContainer";
 
 const Main = () => {
-  const [tabIndex, setTabIndex] = React.useState(1);
 
   return (
     <>
       <section className="lg:px-24 lg:py-6 p-4">
         <div className="flex flex-col lg:flex-row justify-between">
-          <div className="basis-2/3 flex-1">
-            <p className="p-2 bg-slate-700 text-white italic mb-2">
+          <div className="basis-3/5 flex-1">
+            <p className="p-2 bg-slate-400 text-white text-xs lg:text-base italic mb-2">
               NB: This prediction is free and will be updated every 24 hours.
               It&apos;s based on latest data and not 100% accurate but 95%
               guaranteed.
             </p>
-
-            <Tab.Group
-              as={"div"}
-              defaultIndex={1}
-              className="w-full"
-              onChange={(index: number) => setTabIndex(index)}
-            >
-              <Tab.List
-                as="div"
-                className={"flex justify-between border-primary border-b-2"}
-              >
-                {tabs.map((tab, index) => (
-                  <Tab
-                    key={index}
-                    className={
-                      `p-2 text-start even:text-center even:px-6 last:text-end lg:min-w-[300px] ${tabIndex == index ? "bg-primary text-white" : "text-black"}`
-                    }
-                  >
-                    {tab}
-                  </Tab>
-                ))}
-              </Tab.List>
-              <Tab.Panels>
-                <Tab.Panel>Content 1</Tab.Panel>
-                <Tab.Panel>Content 2</Tab.Panel>
-                <Tab.Panel>Content 3</Tab.Panel>
-              </Tab.Panels>
-            </Tab.Group>
+            
+            <TabContainer />
+            
           </div>
-          <div className="basis-1/3 flex-1 lg:ps-4">
+          <div className="basis-2/5 flex-1 lg:ps-4">
             <h1 className="font-extrabold p-2 bg-primary text-white text-3xl">
               Advertisement
             </h1>
