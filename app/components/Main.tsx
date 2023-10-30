@@ -14,11 +14,11 @@ const Main = () => {
               It&apos;s based on latest data and not 100% accurate but 95%
               guaranteed.
             </p>
-            
+
             <TabContainer />
             
           </div>
-          <div className="basis-2/5 flex-1 lg:ps-4">
+          <div className="basis-2/5 flex-1 text-xs lg:text-base lg:ps-4">
             <h1 className="font-extrabold p-2 bg-primary text-white text-3xl">
               Advertisement
             </h1>
