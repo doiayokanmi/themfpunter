@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Heroflex = () => {
   return (
     <>
-    <div className="lg:h-[430px] h-[320px] lg:flex overflow-hidden items-center justify-between text-white lg:px-24 p-4">
+    <div className="lg:h-[500px] h-[400px] lg:flex overflow-hidden items-center justify-between text-white lg:px-24 p-4">
             <div className="text-center lg:text-start">
               <h1 className="font-extrabold lg:text-6xl text-2xl lg:leading-[70px]">
                 WELCOME TO THE MF PUNTER PREDICTION WEB APP
