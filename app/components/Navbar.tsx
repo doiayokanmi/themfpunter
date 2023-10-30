@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-2" onClick={toggleMenu}>
-          <Link href={"/"} className="bg-primary p-2 rounded">
+          <Link href={"/vip"} className="bg-primary p-2 rounded">
             Subscribe
           </Link>
           <div className="cursor-pointer lg:hidden p-2 rounded-full bg-white text-primary">

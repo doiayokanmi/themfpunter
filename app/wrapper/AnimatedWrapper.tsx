@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -10,7 +10,7 @@ const AnimatedWrapper = ({ children }: { children: React.ReactNode }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-		transition={{ duration: 1 }}
+        transition={{ duration: 1 }}
       >
         <>{children}</>
       </motion.div>
@@ -18,4 +18,4 @@ const AnimatedWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default AnimatedWrapper
+export default AnimatedWrapper;

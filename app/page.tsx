@@ -2,7 +2,6 @@
 
 import AnimatedWrapper from "./wrapper/AnimatedWrapper";
 import Hero from "./components/Hero";
-import Time from "./components/Time";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
