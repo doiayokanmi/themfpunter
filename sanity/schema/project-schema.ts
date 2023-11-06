@@ -14,8 +14,18 @@ const project = {
       type: "string",
     },
     {
+      name: "league",
+      title: "League",
+      type: "string",
+    },
+    {
       name: "time",
       title: "Time",
+      type: "string",
+    },
+    {
+      name: "correctScore",
+      title: "Correct Score",
       type: "string",
     },
     {
@@ -27,17 +37,25 @@ const project = {
           const homeTeam = document.homeTeam;
           const awayTeam = document.awayTeam;
     
-          // Get the first 3 letters of both fields
           const firstThreeHome = homeTeam.substring(0, 3);
           const firstThreeAway = awayTeam.substring(0, 3);
     
-          // Combine the first 3 letters and slugify
           const combined = `${firstThreeHome}-${firstThreeAway}`;
           return combined.toLowerCase().replace(/\s+/g, '-');
         },
         maxLength: 96,
       },
     },    
+    {
+      name: "outcome",
+      title: "Outcome",
+      type: 'string',
+      options: {
+        list: [
+          'not started', 'ongoing', 'won', 'loss', 'void'
+        ]
+      }
+    },
     {
       name: "prediction",
       title: "Select Prediction",
@@ -56,28 +74,18 @@ const project = {
           { title: "Away 0.5", value: "a0.5" },
           { title: "HWEH", value: "HWEH" },
           { title: "AWEH", value: "AWEH" },
-          { title: "1-0 H", value: "10" },
-          { title: "2-0 H", value: "20" },
-          { title: "3-0 H", value: "30" },
-          { title: "4-0 H", value: "40" },
-          { title: "0-1 A", value: "01" },
-          { title: "0-2 A", value: "02" },
-          { title: "0-3 A", value: "03" },
-          { title: "0-4 A", value: "04" },
+          { title: "1-0 H", value: "1-0 H" },
+          { title: "2-0 H", value: "2-0 H" },
+          { title: "3-0 H", value: "3-0 H" },
+          { title: "4-0 H", value: "4-0 H" },
+          { title: "0-1 A", value: "0-1 A" },
+          { title: "0-2 A", value: "0-2 A" },
+          { title: "0-3 A", value: "0-3 A" },
+          { title: "0-4 A", value: "0-4 A" },
         ],
       },
     },
     
-    {
-      name: "date",
-      title: "Select Date",
-      type: "date",
-      options: {
-        dateFormat: "DD/MM/YYYY",
-        placeholder: 'Select a date and time',
-        calendarTodayLabel: 'Today',
-      },
-    },
   ],
 };
 

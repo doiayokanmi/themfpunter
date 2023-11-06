@@ -8,7 +8,7 @@ const Main = () => {
     <>
       <section className="lg:px-24 lg:py-6 p-4">
         <div className="flex flex-col lg:flex-row justify-between">
-          <div className="basis-3/5 flex-1">
+          <div className="basis-2/3">
             <p className="p-2 bg-slate-400 text-white text-xs lg:text-base italic mb-2">
               NB: This prediction is free and will be updated every 24 hours.
               It&apos;s based on latest data and not 100% accurate but 95%
@@ -18,7 +18,7 @@ const Main = () => {
             <TabContainer />
             
           </div>
-          <div className="basis-2/5 flex-1 text-xs lg:text-base lg:ps-4">
+          <div className="basis-1/3 text-xs lg:text-base lg:ps-4">
             <h1 className="font-extrabold p-2 bg-primary text-white text-3xl">
               Advertisement
             </h1>
