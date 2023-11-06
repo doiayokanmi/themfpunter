@@ -1,7 +1,7 @@
 import { getData } from "@/sanity-utils";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const Table = async () => {
+const Table = ({currentDate}: {currentDate: string}) => {
   interface Item {
     homeTeam: string;
     awayTeam: string;
@@ -10,9 +10,27 @@ const Table = async () => {
     correctScore: string;
     league: string;
     outcome: string;
+    _createdAt: string;
   }
 
-  const data = await getData()
+  const [data, setData] = useState<Item[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const allData = await getData();
+
+
+      const dataToday = allData.filter((item: Item) => {
+        const itemDate = item._createdAt.split("T")[0];
+        return itemDate === currentDate;
+      });
+
+      setData(dataToday);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <table className="w-full text-xs lg:text-base">
       <thead>
@@ -44,7 +62,7 @@ const Table = async () => {
           <td className="p-2 py-4 text-center relative group">
             <div className="absolute text-primary text-xs py-2 w-full h-full left-0 top-0 hidden group-hover:block">{item.outcome}</div>
             {
-              item.outcome == 'won' ? '✔️' : item.outcome == 'void' ? '✖️' : item.outcome == 'ongoing' ? '⚽️' : item.outcome == 'loss' ? '❌' : '🔜'
+              item.outcome == 'won' ? '✔️' : item.outcome == 'void' ? '✖️' : item.outcome == 'ongoing' ? '⚽️' : item.outcome == 'loss' ? '❌' : '🔜
             }
           </td>
         </tr>
@@ -55,6 +73,7 @@ const Table = async () => {
     </table>
   );
 };
+
 
 
 export default Table;

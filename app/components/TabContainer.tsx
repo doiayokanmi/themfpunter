@@ -24,14 +24,14 @@ const TabContainer = () => {
                 tabIndex == index ? "bg-primary text-white" : "text-black"
               }`}
             >
-              {tab}
+              {tab.title}
             </Tab>
           ))}
         </Tab.List>
         <Tab.Panels>
           {tabs.map((tab, index) => (
             <Tab.Panel key={index} className={`py-4`}>
-              <Table />
+              <Table currentDate={tab.currentDate} />
             </Tab.Panel>
           ))}
         </Tab.Panels>
