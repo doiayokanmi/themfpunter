@@ -62,7 +62,7 @@ const Table = ({currentDate}: {currentDate: string}) => {
           <td className="p-2 py-4 text-center relative group">
             <div className="absolute text-primary text-xs py-2 w-full h-full left-0 top-0 hidden group-hover:block">{item.outcome}</div>
             {
-              item.outcome == 'won' ? '✔️' : item.outcome == 'void' ? '✖️' : item.outcome == 'ongoing' ? '⚽️' : item.outcome == 'loss' ? '❌' : '🔜
+              item.outcome == 'won' ? '✔️' : item.outcome == 'void' ? '✖️' : item.outcome == 'ongoing' ? '⚽️' : item.outcome == 'loss' ? '❌' : '🔜'
             }
           </td>
         </tr>
