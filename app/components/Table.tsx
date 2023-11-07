@@ -44,7 +44,7 @@ const Table = ({ currentDate }: { currentDate: string }) => {
               <th className="p-2 py-4 text-center hidden lg:block">
                 Predicted CS
               </th>
-              <th className="p-2 py-4 text-left">League</th>
+              <th className="p-2 py-4 text-center">League</th>
               <th className="p-2 py-4 text-center">Outcome</th>
             </tr>
           </thead>
@@ -57,14 +57,14 @@ const Table = ({ currentDate }: { currentDate: string }) => {
                     <p>
                       {item.homeTeam} vs {item.awayTeam}
                     </p>
-                    <div className="mt-2 flex"><p>🕗{item.time}</p> <p className="lg:ms-16 ms-8">🔢{item.odd}</p></div>
+                    <div className="mt-2 flex text-primary justify-between lg:justify-start"><p>🕗{item.time}</p> <p className="lg:ms-16">🔢{item.odd}</p></div>
                   </div>
                 </td>
                 <td className="p-2 py-4 text-center">{item.prediction}</td>
                 <td className="p-2 py-4 text-center hidden lg:block">
                   {item.correctScore}
                 </td>
-                <td className="p-2 py-4">{item.league}</td>
+                <td className="p-2 py-4 text-center">{item.league}</td>
                 <td className="p-2 py-4 text-center relative group">
                   <div className="absolute text-primary text-xs py-2 w-full h-full left-0 top-0 hidden group-hover:block">
                     {item.outcome}
