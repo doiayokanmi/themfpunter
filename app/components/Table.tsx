@@ -57,7 +57,7 @@ const Table = ({ currentDate }: { currentDate: string }) => {
                     <p>
                       {item.homeTeam} vs {item.awayTeam}
                     </p>
-                    <div className="mt-2 flex text-primary justify-between lg:justify-start"><p>🕗{item.time}</p> <p className="lg:ms-16">🔢{item.odd}</p></div>
+                    <div className="mt-2 text-[0.5rem] lg:text-sm flex text-primary justify-between lg:justify-start"><p>🕗{item.time}</p> <p className="lg:ms-16">🔢{item.odd}</p></div>
                   </div>
                 </td>
                 <td className="p-2 py-4 text-center">{item.prediction}</td>
