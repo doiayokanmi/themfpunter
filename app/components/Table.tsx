@@ -11,6 +11,8 @@ const Table = ({ currentDate }: { currentDate: string }) => {
     league: string;
     outcome: string;
     _createdAt: string;
+    date: string;
+    odd: string;
   }
 
   const [data, setData] = useState<Item[]>([]);
@@ -20,7 +22,7 @@ const Table = ({ currentDate }: { currentDate: string }) => {
       const allData = await getData();
 
       const dataToday = allData.filter((item: Item) => {
-        const itemDate = item._createdAt.split("T")[0];
+        const itemDate = item.date.split("T")[0];
         return itemDate === currentDate;
       });
 
@@ -55,7 +57,7 @@ const Table = ({ currentDate }: { currentDate: string }) => {
                     <p>
                       {item.homeTeam} vs {item.awayTeam}
                     </p>
-                    <p className="mt-2">{item.time}</p>
+                    <div className="mt-2 flex"><p>🕗{item.time}</p> <p className="lg:ms-16 ms-8">🔢{item.odd}</p></div>
                   </div>
                 </td>
                 <td className="p-2 py-4 text-center">{item.prediction}</td>

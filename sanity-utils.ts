@@ -18,6 +18,8 @@ export async function getData() {
         league,
         correctScore,
         outcome,
+        date, 
+        odd,
     }`
   )
 }
