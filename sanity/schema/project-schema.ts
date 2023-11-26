@@ -1,4 +1,4 @@
-const project = {
+export const project = {
   name: "project",
   title: "Best Tips",
   type: "document",
@@ -105,4 +105,41 @@ const project = {
 };
 
 
-export default project;
+export const booking = {
+  name: "booking",
+  title: "Booking",
+  type: "document",
+  fields: [
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      }
+    },
+    {
+      name: 'code',
+      title: 'Code',
+      type: 'string'
+    },
+    {
+      name: 'totalOdds',
+      title: 'Total Odds',
+      type: 'number',
+    },
+    {
+      name: 'punter',
+      title: 'Punter that posted the image',
+      type:'string',
+    },
+    {
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+      options: {
+        dateFormat: '01-12-2023'
+      }
+    }
+  ]
+}
